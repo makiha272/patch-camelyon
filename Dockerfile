@@ -16,6 +16,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 ENV PATH="/root/.local/bin:$PATH"
 
+# libGLのインストール（OpenCV等で必要になる場合がある）
+RUN apt-get update && apt-get install -y libglib2.0-0 libgl1-mesa-glx
+
 # 作業ディレクトリ
 WORKDIR /workspace
 

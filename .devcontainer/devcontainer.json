@@ -15,7 +15,9 @@
         // workspace(.devcontainerがあるフォルダ)をバインドマウントして同期
         "source=${localWorkspaceFolder},target=/workspace,type=bind",
         // HuggingFaceのデータが格納されるキャッシュフォルダをバインドマウント
-        "source=${localEnv:HOME}/.cache/huggingface,target=/root/.cache/huggingface,type=bind"
+        "source=${localEnv:HOME}/.cache/huggingface,target=/root/.cache/huggingface,type=bind",
+        // PyTorchのデータが格納されるキャッシュフォルダをバインドマウント
+        "source=${localEnv:HOME}/.cache/torch,target=/root/.cache/torch,type=bind"
     ],
     "customizations": {
         "vscode": {
