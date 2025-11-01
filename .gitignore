@@ -7,7 +7,6 @@ wheels/
 *.egg-info
 
 # Jupyter
-*.ipynb
 .ipynb_checkpoints
 .notebooks/
 outputs/
